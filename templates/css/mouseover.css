@@ -1,0 +1,61 @@
+.mouseover_topround {
+  width:663px;
+  background-image:url(../images/overtop.gif);
+  height:7px;
+}
+.mouseover_bottomround {
+  width:663px;
+  background-image:url(../images/overbottom.gif);
+  height:7px;
+}
+.mouseover_title {
+	 background-color:#004A6B;
+	 padding-left:10px;
+	 font-family:Tahoma;
+	 font-size:14px;
+	 font-weight:bold;
+	 color:#f9f9f9; 
+}
+.mouseover_title A:link {
+ font-family:Tahoma;
+ font-size:14px;
+ font-weight:bold;
+ color:#f9f9f9; 
+ text-decoration:none;
+}
+.mouseover_title A:visited {
+ font-family:Tahoma;
+ font-size:14px;
+ font-weight:bold;
+ color:#f9f9f9; 
+}
+.mouseover_title A:hover {
+ font-family:Tahoma;
+ font-size:14px;
+ font-weight:bold;
+ color:#f9f9f9; 
+ text-decoration:none;
+}
+.mouseover_title A:active {
+ font-family:Tahoma;
+ font-size:14px;
+ font-weight:bold;
+ color:#f9f9f9; 
+}
+.mouseover_description {
+ font-family:Arial;
+ font-size:13px;
+ font-weight:normal;
+ color:#3e3e3e;   
+}
+span.mouseover_description a {
+ font-family:Arial;
+ font-size:13px;
+ font-weight:normal;
+ color:#3e3e3e;   
+}
+.mouseover_submenus {
+ font-family:Arial;
+ font-size:14px;
+ font-weight:bold;    
+}

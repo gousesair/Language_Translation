@@ -1,0 +1,22 @@
+var langs =
+[['हिन्दी',            ['hi-IN']],];
+var langs =
+[['English',         ['en-IN'],],];
+var langs =
+[['मराठी',             ['mr-IN']],];
+var langs =
+[['മലയാളം',          ['ml-IN']],];
+var langs =
+[['தமிழ்',            ['ta-IN', 'இந்தியா'],
+                     ['ta-SG', 'சிங்கப்பூர்'],
+                     ['ta-LK', 'இலங்கை'],
+                     ['ta-MY', 'மலேசியா']],];
+var langs =
+[['తెలుగు',           ['te-IN']],];
+var langs =
+[['ಕನ್ನಡ',             ['kn-IN']],];
+var langs =
+[['ગુજરાતી',           ['gu-IN']],];
+var langs =
+[['বাংলা',            ['bn-IN', 'ভারত'],
+                     ['bn-BD', 'বাংলাদেশ']],];

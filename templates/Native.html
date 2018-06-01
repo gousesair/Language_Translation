@@ -1,0 +1,356 @@
+
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="content-script-type" content="type"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <!-- <meta name="robots" content="index, follow"/>
+    <meta name="description" content="Indian Language Technology Proliferation  and Deployment Centre"/>
+    <meta name="generator" content="Joomla! 1.5 - Open Source Content Management"/> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <title>Indian Language Technology Proliferation and Deployment Centre</title>
+	
+    <link rel="stylesheet" href="css/system.css" type="text/css"/>
+    <link rel="stylesheet" href="css/general.css" type="text/css"/>
+    <link href="css/mouseover.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="css/home.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="css/template_css.css" rel="stylesheet" type="text/css" media="screen"/>
+    <style type="text/css">
+        div.window4
+        {
+            /*right:25px;*/
+            position: fixed;
+            background-color: #004A6B;
+            color: #FFFFFF;
+            right: auto;
+            bottom: 0em;
+            height: 18px;
+            text-align: center;
+            font-weight: bold;
+            padding: 3px 5px 3px 5px;
+            z-index: 1;
+        }
+        ul.topnav
+        {
+            list-style: none;
+            padding: 0 20px;
+            margin: 0;
+            float: left;
+            background: #222;
+            background: url(topnav_bg.gif) repeat-x;
+        }
+        ul.topnav li
+        {
+            float: left;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 500;
+        }
+        ul.topnav li a
+        {
+            padding: 0px 5px;
+            color: #f9f9f9;
+            display: block;
+            text-decoration: none;
+            float: left;
+        }
+        ul.topnav li a:hover
+        {
+            text-decoration: none;
+            background: url(topnav_hover.gif) no-repeat center top;
+        }
+        ul.topnav li span
+        {
+            float: left;
+            background: url(subnav_btn.gif) no-repeat center top;
+        }
+        ul.topnav li span.subhover
+        {
+            background-position: center bottom;
+            cursor: pointer;
+        }
+        ul.topnav li ul.subnav
+        {
+            list-style: none;
+            position: absolute;
+            left: 0;
+            top: 15px;
+            background: #edeae5;
+            margin: 0;
+            padding: 0;
+            display: none;
+            float: left; /*-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;*/
+            border: 1px solid #111;
+            z-index: 500;
+        }
+        ul.topnav li ul.subnav li
+        {
+            margin: 0;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            border-top: 1px solid #252525;
+            clear: both;
+            width: 120px;
+        }
+        html ul.topnav li ul.subnav li a
+        {
+            float: left;
+            background: #edeae5 url(dropdown_linkbg.gif) no-repeat 10px center;
+        }
+        html ul.topnav li ul.subnav li a:hover
+        {
+            background: #edeae5 url(dropdown_linkbg.gif) no-repeat 10px center;
+            text-decoration: none;
+        }
+        ul.subnav
+        {
+            display: none;
+        }
+    </style>
+    <!--[if IE 6]>
+
+<style type="text/css"> 
+
+.menu {
+
+	margin-left:7px;		
+
+}
+
+.menu ul { 
+
+	margin-left: 5px;
+
+}
+
+#headermiddleleft {
+
+	margin-left: 12px;
+
+}
+
+#headermiddlecenter ul {
+
+	margin-left: 0px;
+
+}
+
+#content table {
+   width: 99%;
+
+}
+
+</style>
+
+<![endif]-->
+    <!--[if lt IE 7]>
+
+<style type="text/css">
+
+div.window4 {position:absolute;bottom:auto;top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+
+}
+
+</style>
+
+<![endif]-->
+<script src= "langTransie_new2.js" language= "Javascript" type="text/javascript"></script>
+<script src= "lang_text.js" language= "Javascript" type="text/javascript"></script>
+
+<script  language= "Javascript" type="text/javascript">
+
+
+//===================================================================
+
+
+ 
+//=================================================================
+ 
+ var SourceLang='{{source}}'
+$(document).ready(function(){
+   $("#ip").html(lang_text_value(SourceLang));
+  //  $("#Language").change(function(){
+		// // var lang_name =$(this).val();
+  //       var lang_name = "Hindi"
+		// $("#ip").val(lang_text_value(lang_name));
+  //  });
+
+    $("#ip").keyup(function(){
+		
+		var lang_name =$("#Language").val();
+        // var lang_name ={{source}}
+
+
+		// $("#ip").val(lang_text_value(lang_name));	
+		// synthesize();
+	
+   });
+
+   $("#clear").click(function(){
+	   $("#ip").html("");
+   });
+});
+
+
+function synthesize()
+{
+	var selText=document.getElementById("ip").value;
+	selText=selText.replace(/~|`/g,'');
+	selText=selText.replace(/!|"|”/g,' ');
+	selText=selText.replace(/[\r\n\|]/g,' ');
+	selText=selText.replace(/[a-zA-Z]/g,' ');
+    selText=selText.replace(/\.+/g,'\.');
+    selText=selText.replace(/\$/g,' \$ ');
+    selText=selText.replace(/\*/g,' \\\* ');
+	selText=selText.replace(/\+/g,' \+ ');
+	selText=selText.replace(/\&/g,' \\\& ');
+	selText=selText.replace(/\</g,' \\\< ');
+	selText=selText.replace(/\=/g,' \\\= ');
+	selText=selText.replace(/\>/g,' \\\> ');
+	selText=selText.replace(/\:/g,' \\\: ');
+	selText=selText.replace(/\_/g,' \\\_ ');
+	selText=selText.replace(/\-/g,' \\\- ');
+	//selText=selText.replace(/\°/g,' \\\डि ');
+	//selText=selText.replace(/\₹/g,' \\\रू ');
+	
+	
+        
+        selText=selText.replace(/\%/g,' \% ');
+        selText=encodeURIComponent(selText);
+	
+	//alert(selText);
+	// var e = document.getElementById("Language");
+	// var lang = e.options[e.selectedIndex].value;
+     var lang = SourceLang
+	
+	//var url = "http://10.210.0.188/tts1/festival_cs_plugin.php";
+        var url = "http:///tdil-dc.in/tts1/festival_cs_plugin.php";
+
+
+	var count =  Date.now();
+	var speed='normal';
+	var params = "Languages="+lang+"&ex=execute&op="+selText+"&count="+count+"&speed="+speed;  
+	//window.alert(params);     
+	http = new XMLHttpRequest();
+	http.open("POST", url, true);
+	//Send the proper header information along with the request
+	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	http.setRequestHeader("Content-length", params.length);
+        //http.setRequestHeader("Access-Control-Allow-Origin:","*");
+	http.setRequestHeader("Connection", "close");
+	http.onreadystatechange = function() 
+	{
+		if(http.readyState == 4) 
+		{
+			var resTxt = http.responseText;
+
+			var startTxt = resTxt.indexOf("temp/");
+			var endTxt = resTxt.indexOf(".mp3",startTxt);
+			var spCode = resTxt.substring(startTxt,endTxt);
+
+
+			document.getElementById("audio").src = "http://tdil-dc.in/tts1/wav_output/fest_out"+count+".mp3";
+			//document.getElementById("audio").src = "http://10.210.0.188/tts1/wav_output/fest_out"+count+".mp3";
+			document.getElementById("t2vDownloadLink").href = "http://tdil-dc.in/tts1/wav_output/fest_out"+count+".mp3";
+			//document.getElementById("t2vDownloadLink").href = "http://10.210.0.188/tts1/wav_output/fest_out"+count+".mp3";
+			document.getElementById("t2vDownloadLink").innerHTML = "Download mp3";
+			document.getElementById("t2vSpeak").childNodes[0].src = "chrome://text2voice/content/images/t2v-loader.jpg";
+			}
+	}
+	http.send(params);
+}
+</script>
+
+
+</head>
+<!--  <body id="jsn-master" text="#000000"  onload= "initPosition(document.box.ip)"> -->
+<body id="jsn-master" text="#000000"  onload="synthesize()">
+    <div id="jsn-page">
+        <div id="container">
+            <table border="0">
+            <tr><td><br/></td><tr>
+                        <tr><td><br/></td><tr>
+               <tr>
+                    
+					<form name="box" style="margin: 0" method="post" >
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"  width="920" id="AutoNumber1">  <tr>
+<td>
+<span style="vertical-align: top"> <b><font color="#CFF5FC"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+<span style="font-size: 12pt">Language</span><font size="3">:</font> 
+  </b></span>
+  
+<input type="hidden" name="ex" value="execute" />
+</td>
+<td>
+<!-- <select id="Language"  tabindex="2">
+
+        <option value ="hindi">{{Lang1}}</option>
+    	<option value="marathihts" >Marathi</option>
+    	<option value="tamil">Tamil</option>
+        <option value="hindi" >Hindi</option>
+    	<option value ="htsgujarati_male" >Gujarati</option>
+    	<option value ="htsbengali" >Bengali</option>
+	<option value ="malayalam" >Malayalam</option>
+	<option value ="htskannada_female" >Kannada</option>
+	<option value ="htsrajasthani_male" >Rajasthani</option>
+	<option value ="odiahts" >Odia</option>
+	<option value ="htsbodo" >Bodo</option>
+    </select> -->
+</td>
+</tr>
+
+
+<tr>
+<td>
+<br />
+
+</td>
+
+<td>
+<br />
+
+</td>
+</tr>
+
+<tr>
+	
+	<td><b><font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unicode/UTF-8 Text Input</font></b></td>
+	<td>
+      <p align="left">
+<!--      <textarea rows="8" name="ip" id="ip" value="" cols="35" tabindex="1" onkeyup="updatePosition_new(this)" onmouseup="updatePosition_new(this)" class =form"> </textarea> -->
+       <textarea rows="10" name="ip" id="ip" value="" cols="80" tabindex="1" class ="form"> {{results1}}</textarea>
+	</p>
+    </td>
+</tr>
+
+<tr>
+	<td>
+		
+	</td>
+
+	<td>
+		<input id="clear" type="button" value=" Clear " name="B4" tabindex="3"  onclick="onClear()"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<!-- <input type="button" value="Listen" tabindex="4" onclick="synthesize()"/>  -->
+	</td>
+
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td><audio src="" controls autoplay type="audio/mpeg" id="audio" style="width: 200px;"> </audio> <a href="http://tdil-dc.in/tts/test.mp3" id="t2vDownloadLink" style="cursor: pointer; color:green; font-size:16px; font-family: comic sans ms; text-decoration: underline;" download ></a></td></tr>
+</table>
+</form>
+
+<br />
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+
+/********************************************************************
+ * JOOMLA! TEMPLATE CSS FILE
+ * ----------------------------------------------------------------
+ * Copyright (C) 2006 - 2008 JoomlaShine.com. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: JoomlaShine.com
+ * Websites:  http://www.joomlashine.com
+*********************************************************************/
+
+
+/** @LAYOUT  **/
+
+.textbox {
+	font-size: 11px;
+	border: 1px solid #000000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.textarea {
+	border:1px solid silver;
+	border-color:#000000;
+	font-size:11px;
+}
+.combobox {
+	border:1px solid silver;
+	font-size:11px;
+}
+#breadcrumb {
+   margin-top: 5px;
+   margin-left: 10px;
+}
+#jsn-master {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 75%;
+}
+#jsn-page {
+	background-color: #ffffff;
+	color: #3E3E3E;
+	border-left: 0px solid #000000;
+	border-right: 0px solid #000000;
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+}
+/** @TYPOGRAPHY **/
+html, body {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+p, pre, blockquote, form, dl, ul, ol, fieldset, address {
+	padding: 0;
+	margin: 0.35em 0 0.8em 0;
+}
+
+fieldset {
+	padding: .5em;
+}
+
+pre {
+	padding: 1em;
+	border-left: 5px solid #404040;
+	background: #FFFFD5;
+	font-family: "Courier New", Courier, monospace;
+}
+
+small {
+	font-size: .85em;
+}
+
+sup {
+	position: relative;
+	bottom: 0.3em;
+	vertical-align: baseline;
+}
+
+sup em {
+	font-size: .8em;
+	color: red;
+}
+
+sup {
+	position: relative;
+	bottom: 0.3em;
+	vertical-align: baseline;
+}
+
+acronym, abbr {
+	border-bottom: 1px dashed;
+	letter-spacing: 1px;
+	cursor: help;
+}
+
+/* @HEADING */
+h1, h2, h3, h4, h5, h6 {
+	font-family:Tahoma; 
+	margin: 0.6em 0 .25em 0;
+}
+
+h1 {
+	font-size: 1.4em;
+	color: #3E3E3E;
+}
+
+h2 {
+	font-size: 1.3em;
+	color: #3E3E3E;
+}
+
+h3 {    
+	font-size: 1.2em;
+	color: #3E3E3E;
+}
+
+h4 {
+	font-size: 1.1em;
+	color: #3E3E3E;
+}
+
+h5, h6 {
+	font-size: 1em;
+	font-weight: bold;
+	color: #3E3E3E;
+}
+
+/* @IMAGE */
+img {
+	border: none;
+}
+
+img.image-left {
+	float: left;
+	margin: .5em 1em .5em 0;
+}
+
+img.image-right {
+	float: right;
+	margin: .5em 0 .5em 1em;
+}
+
+img.image-border {
+	border: 1px solid #e5e5e5;
+	padding: 3px;
+}
+
+img.image-margin {
+	margin: .5em;
+}
+ 
+/* @LINK */
+a:link,
+a:visited {
+	text-decoration: none;
+	outline: none;
+	color: #00789f;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	color: #FF0000;
+}
+
+a img {
+	border: none;
+}
+
+input, select { font-size: 12px; font-weight:normal; border: 1px solid silver; }
+textarea      { font-size: 12px;  border: 1px solid silver; }
+button        { font-size: 12px; font-weight:normal; border: 1px solid silver; cursor:pointer; }
+
+input.disabled { background-color: #F0F0F0; }
+
+input.button  { cursor: pointer; }
+
+input:focus,
+select:focus,
+textarea:focus { background-color: #ffd }
+/* Reset original styles */
+/* @TEXT */
+.clearbreak {
+	clear: both;
+}
+#container {
+  width: 960px;
+  height:auto;
+  border-top:none;
+  border-left:none;
+  border-right:none;  
+}
+#navbar {
+  float: left;
+  width: 250px;  
+  padding: 10px;
+}
+#content {
+  margin-left: 270px;
+  padding: 10px;
+}
+#content table {
+	width: 100%;    
+}
+.pagination {
+	display:table;
+	margin:0pt auto;
+	padding:0pt;
+}
+.pagination div.limit {
+	float:left;
+	height:22px;
+	line-height:22px;
+	margin:0pt 10px;
+}		
